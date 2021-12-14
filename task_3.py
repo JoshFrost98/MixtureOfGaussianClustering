@@ -39,7 +39,7 @@ X_full[:,1] = f2
 X_full = X_full.astype(np.float32)
 
 # number of GMM components
-k = 3
+k = 6
 
 #########################################
 # Write your code here

@@ -15,7 +15,7 @@ def plot_data_3D(X, title_string, ax):
     # set label of y axis
     ax.set_ylabel('f2')
     # set label of z axis
-    ax.set_zlabel('f1 + f2')
+    ax.set_zlabel('f0')
     # scatter the points, with red color
     ax.scatter3D(X[:,0], X[:,1], X[:,2], c='black', marker='.', label=title_string)
     # add legend to the subplot

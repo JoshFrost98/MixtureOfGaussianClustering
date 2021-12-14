@@ -30,6 +30,7 @@ phoneme_id = data['phoneme_id']
 # frequencies f1 and f2
 f1 = data['f1']
 f2 = data['f2']
+f0 = data['f0']
 
 
 # Initialize array containing f1, f2 & f1+f2, of all phonemes.
@@ -39,7 +40,7 @@ X_full = np.zeros((len(f1), 3))
 # Store f1 in the first column of X_full, f2 in the second column of X_full and f1+f2 in the third column of X_full
 X_full[:,0] = f1
 X_full[:,1] = f2
-X_full[:,2] = X_full[:,0] + X_full[:,1]
+X_full[:,2] = f0
 ########################################/
 X_full = X_full.astype(np.float32)
 
@@ -182,4 +183,4 @@ print('')
 # plt.ioff()
 plot_filename = os.path.join(os.getcwd(), 'figures', 'dataset_3D_phoneme_{}.png'.format(p_id))
 plt.savefig(plot_filename)
-
+plt.show()
